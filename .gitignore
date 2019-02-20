@@ -13,8 +13,8 @@ selenium/
 
 # Build artifacts
 
-built/
-spec/built/
+#built/
+#spec/built/
 node_modules/
 website/bower_components/
 website/build/
