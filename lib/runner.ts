@@ -327,6 +327,7 @@ export class Runner extends EventEmitter {
         return browser_.restartSync().ready;
       } else {
         return this.driverprovider_.quitDriver(browser_.driver)
+            .catch(e => console.error('Quiting driver failed, but never mind...', e))
             .then(replaceBrowser)
             .then(newBrowser => newBrowser.ready);
       }
